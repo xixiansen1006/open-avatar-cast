@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>open-avatar-cast · 虚拟主播</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="stage" class="stage">
+    <div class="avatar-wrap">
+      <div id="avatar-stage" class="avatar-stage" aria-label="虚拟形象">
+        <!-- SVG 将注入此处；#mouth 为口型目标 -->
+      </div>
+      <div id="status" class="status">就绪</div>
+    </div>
+
+    <aside id="panel" class="panel">
+      <header class="panel-header">
+        <h1>open-avatar-cast</h1>
+        <p class="tagline">可换包 · TTS · OBS 浏览器源</p>
+      </header>
+
+      <label class="field">
+        <span>角色</span>
+        <select id="character-select"></select>
+      </label>
+
+      <label class="field">
+        <span>播报文本</span>
+        <textarea id="text-input" rows="4" placeholder="输入中文，例如：大家好，欢迎来到今天的直播间。"></textarea>
+      </label>
+
+      <label class="checkbox">
+        <input type="checkbox" id="use-llm" />
+        <span>经 LLM 再播报（需配置）</span>
+      </label>
+
+      <div class="actions">
+        <button id="btn-speak" type="button" class="primary">播报</button>
+        <button id="btn-stop" type="button" class="ghost">停止</button>
+      </div>
+
+      <div class="obs-hint">
+        <strong>OBS</strong>：添加「浏览器」源，URL 填本页；
+        勾选下方可隐藏控制面板，便于抠像推流。
+        <label class="checkbox">
+          <input type="checkbox" id="obs-mode" />
+          <span>OBS 模式（隐藏面板）</span>
+        </label>
+      </div>
+
+      <footer class="meta" id="meta"></footer>
+    </aside>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
