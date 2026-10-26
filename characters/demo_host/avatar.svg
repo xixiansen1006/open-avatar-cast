@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 360" width="320" height="360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="100%" stop-color="#16213e"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffe4c9"/>
+      <stop offset="100%" stop-color="#f5c9a8"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5c3d2e"/>
+      <stop offset="100%" stop-color="#3d2518"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="360" fill="url(#bg)" rx="24"/>
+  <!-- hair back -->
+  <ellipse cx="160" cy="175" rx="95" ry="110" fill="url(#hair)"/>
+  <!-- face -->
+  <ellipse id="face" cx="160" cy="170" rx="78" ry="90" fill="url(#skin)"/>
+  <!-- bangs -->
+  <path d="M85 140 Q160 60 235 140 Q200 100 160 95 Q120 100 85 140Z" fill="url(#hair)"/>
+  <!-- eyes -->
+  <ellipse cx="130" cy="160" rx="12" ry="14" fill="#2c1810"/>
+  <ellipse cx="190" cy="160" rx="12" ry="14" fill="#2c1810"/>
+  <circle cx="134" cy="155" r="4" fill="#fff" opacity="0.85"/>
+  <circle cx="194" cy="155" r="4" fill="#fff" opacity="0.85"/>
+  <!-- blush -->
+  <ellipse cx="112" cy="190" rx="16" ry="8" fill="#ff9a9e" opacity="0.35"/>
+  <ellipse cx="208" cy="190" rx="16" ry="8" fill="#ff9a9e" opacity="0.35"/>
+  <!-- nose -->
+  <path d="M160 170 L155 195 L165 195" fill="none" stroke="#d4a574" stroke-width="2" stroke-linecap="round"/>
+  <!-- mouth (lip-sync target) -->
+  <ellipse id="mouth" cx="160" cy="225" rx="18" ry="6" fill="#c45c6a"/>
+  <!-- collar -->
+  <path d="M90 280 Q160 250 230 280 L230 360 L90 360Z" fill="#e94560"/>
+  <text x="160" y="340" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14" opacity="0.7">demo_host</text>
+</svg>

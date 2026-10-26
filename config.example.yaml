@@ -1,0 +1,38 @@
+# open-avatar-cast 示例配置
+# 复制为 config.yaml 后按需修改；也可用环境变量覆盖（见 .env.example）
+
+server:
+  host: "0.0.0.0"
+  port: 8765
+  reload: false
+
+# 默认角色 ID（对应 characters/<id>/）
+default_character: "demo_host"
+
+tts:
+  # 当前实现: edge | openai_compat
+  provider: "edge"
+  # Edge-TTS 默认音色（可被角色 YAML 覆盖）
+  edge_voice: "zh-CN-XiaoxiaoNeural"
+  edge_rate: "+0%"
+  edge_volume: "+0%"
+  # OpenAI-compatible TTS（空壳/可选）
+  openai_base_url: "http://127.0.0.1:9880/v1"
+  openai_api_key: ""
+  openai_model: "tts-1"
+  openai_voice: "alloy"
+
+# 可选 LLM 对话（关掉也能纯 TTS）
+llm:
+  enabled: false
+  base_url: "https://api.openai.com/v1"
+  api_key: ""
+  model: "gpt-4o-mini"
+  system_prompt: "你是一位友好的虚拟主播，回答简洁自然，适合口播。"
+
+# 可选 OBS WebSocket（连不上不阻塞主流程）
+obs:
+  enabled: false
+  host: "127.0.0.1"
+  port: 4455
+  password: ""
